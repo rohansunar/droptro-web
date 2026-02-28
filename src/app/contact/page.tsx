@@ -22,8 +22,7 @@ const businessHours = [
 const contactInfo = {
   address: 'Bhanu Nagar, Jalpaiguri, West Bengal, India - 735101',
   phone: {
-    primary: '+1 (555) 123-4567',
-    support: '+1 (555) 987-6543',
+    primary: '+91-94743-93764',
   },
   email: {
     general: 'contact@droptro.com'

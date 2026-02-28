@@ -60,6 +60,15 @@ export function ContactForm() {
           }
         });
         setErrors(fieldErrors);
+        setSubmitResult({
+          success: false,
+          message: 'Please correct the highlighted fields and try again.',
+        });
+      } else if (!result.success && !result.errors) {
+        setSubmitResult({
+          success: false,
+          message: 'Something went wrong. Please try again.',
+        });
       }
     } catch {
       setSubmitResult({

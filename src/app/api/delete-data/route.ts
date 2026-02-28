@@ -1,20 +1,14 @@
 import { promises as fs } from 'fs';
 import { join } from 'path';
 import { NextRequest, NextResponse } from 'next/server';
-import { contactSchema } from '@/features/contact/schema';
+import { deleteDataSchema } from '@/features/delete-data/schema';
 
 export const runtime = 'nodejs';
 
-/**
- * API route handler for contact form submissions
- * Validates and processes contact form data
- */
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-
-    // Validate the incoming data against the schema
-    const validationResult = contactSchema.safeParse(body);
+    const validationResult = deleteDataSchema.safeParse(body);
 
     if (!validationResult.success) {
       return NextResponse.json(
@@ -27,28 +21,28 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const { name, email, subject, message } = validationResult.data;
+    const { phone, email, reason, app } = validationResult.data;
 
     const logEntry = [
       `timestamp=${new Date().toISOString()}`,
-      `name=${name}`,
+      `phone=${phone}`,
       `email=${email}`,
-      `subject=${subject}`,
-      `message=${message.replace(/\s+/g, ' ').trim()}`,
+      `app=${app}`,
+      `reason=${reason.replace(/\s+/g, ' ').trim()}`,
     ].join('\t');
 
-    const logPath = join(process.cwd(), 'contact-submissions.txt');
+    const logPath = join(process.cwd(), 'delete-data-requests.txt');
     await fs.appendFile(logPath, `${logEntry}\n`, { encoding: 'utf8' });
 
     return NextResponse.json(
       {
         success: true,
-        message: 'Thank you for your message! We will get back to you soon.',
+        message: 'Your deletion request has been received. We will contact you shortly.',
       },
       { status: 200 }
     );
   } catch (error) {
-    console.error('Contact form error:', error);
+    console.error('Delete data error:', error);
 
     return NextResponse.json(
       {
