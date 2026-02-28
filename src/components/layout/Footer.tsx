@@ -49,15 +49,14 @@ export function Footer() {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center">
-              <div className="relative h-12 w-32">
-                <Image
-                  src="/logo.svg"
-                  alt="Droptro"
-                  fill
-                  className="object-contain"
-                  unoptimized
-                />
-              </div>
+              <Image
+                src="/logo.png"
+                alt="Droptro"
+                width={160}
+                height={48}
+                className="h-10 w-auto sm:h-12"
+                priority
+              />
             </Link>
             <p className="mt-4 text-sm text-gray-600">
               Building the future of water management with innovative solutions.
@@ -70,66 +69,21 @@ export function Footer() {
               Contact Us
             </h3>
             <ul className="space-y-3">
-              <li className="flex items-start text-sm text-gray-600">
-                <svg
-                  className="mr-2 h-5 w-5 flex-shrink-0 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-                <span>{contactInfo.address}</span>
+              <li className="grid grid-cols-[auto,1fr] items-start gap-3 text-sm text-gray-600 leading-6">
+                <span className="leading-6">{contactInfo.address}</span>
               </li>
-              <li className="flex items-center text-sm text-gray-600">
-                <svg
-                  className="mr-2 h-5 w-5 flex-shrink-0 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
+              <li className="grid grid-cols-[auto,1fr] items-start gap-3 text-sm text-gray-600 leading-6">
                 <a
                   href={`mailto:${contactInfo.email}`}
-                  className="transition-colors duration-200 hover:text-blue-600"
+                  className="transition-colors duration-200 hover:text-blue-600 leading-6"
                 >
                   {contactInfo.email}
                 </a>
               </li>
-              <li className="flex items-center text-sm text-gray-600">
-                <svg
-                  className="mr-2 h-5 w-5 flex-shrink-0 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                  />
-                </svg>
+              <li className="grid grid-cols-[auto,1fr] items-start gap-3 text-sm text-gray-600 leading-6">
                 <a
                   href={`tel:${contactInfo.phone}`}
-                  className="transition-colors duration-200 hover:text-blue-600"
+                  className="transition-colors duration-200 hover:text-blue-600 leading-6"
                 >
                   {contactInfo.phone}
                 </a>
@@ -161,12 +115,12 @@ export function Footer() {
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-900">
               Download App
             </h3>
-            <div className="space-y-3">
+            <div className="space-y-2">
               {appLinks.map((app) => (
                 <Link
                   key={app.label}
                   href={app.href}
-                  className="flex w-full justify-center rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors duration-200 hover:bg-blue-700"
+                  className="block text-sm font-medium text-blue-600 transition-colors duration-200 hover:text-blue-700"
                 >
                   {app.label}
                 </Link>

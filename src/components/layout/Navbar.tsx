@@ -28,15 +28,14 @@ export function Navbar() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <div className="relative h-45 w-38">
-            <Image
-              src="/logo.svg"
-              alt="Droptro"
-              fill
-              className="object-contain"
-              unoptimized
-            />
-          </div>
+          <Image
+            src="/logo.png"
+            alt="Droptro"
+            width={160}
+            height={48}
+            className="h-10 w-auto sm:h-12"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
