@@ -1,0 +1,21 @@
+<svg width="620" height="260" viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="blueDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4EA3FF"></stop>
+      <stop offset="60%" stop-color="#2F80ED"></stop>
+      <stop offset="100%" stop-color="#1C6FD6"></stop>
+    </linearGradient>
+
+    <filter id="glow">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#2F80ED" flood-opacity="0.4"></feDropShadow>
+    </filter>
+  </defs>
+
+  <g fill="url(#blueDark)" filter="url(#glow)">
+    <text x="60" y="170" font-family="Poppins, Montserrat, Arial, sans-serif" font-size="150" font-weight="700" letter-spacing="-2">
+      Droptro
+    </text>
+  </g>
+
+</svg>
