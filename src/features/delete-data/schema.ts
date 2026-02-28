@@ -11,7 +11,7 @@ export const deleteDataSchema = z.object({
     .min(10, 'Please provide a brief reason (min 10 characters)')
     .max(2000, 'Reason must be less than 2000 characters'),
   app: z.enum(['Droptro', 'Droptro Seller', 'DroptroGo'], {
-    errorMap: () => ({ message: 'Please choose an app' }),
+    message: 'Please choose an app',
   }),
 });
 
