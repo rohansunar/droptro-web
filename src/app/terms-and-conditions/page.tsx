@@ -30,7 +30,7 @@ export default function TermsAndConditionsPage() {
               </h2>
               <p>
                 By downloading, installing, or using any of Droptro&apos;s applications (
-                <strong>DroptroGo</strong>, <strong>Droptro Seller</strong>) or visiting our
+                <strong>Droptro</strong> (customer app), <strong>DroptroGo</strong> (rider app), <strong>Droptro Seller</strong> (vendor app)) or visiting our
                 website (<strong>droptro.com</strong>), you agree to be legally bound by these
                 Terms &amp; Conditions (&quot;Terms&quot;). If you do not agree, please do not
                 use our Services.
@@ -53,8 +53,12 @@ export default function TermsAndConditionsPage() {
               </p>
               <ul className="list-disc space-y-2 pl-6 mt-3">
                 <li>
-                  <strong>DroptroGo:</strong> Customer-facing mobile application for browsing
+                  <strong>Droptro:</strong> Customer-facing mobile application for browsing
                   vendors, placing orders, tracking deliveries, and managing accounts.
+                </li>
+                <li>
+                  <strong>DroptroGo:</strong> Rider/delivery-partner application for accepting
+                  delivery tasks, navigating to customer locations, and confirming deliveries.
                 </li>
                 <li>
                   <strong>Droptro Seller:</strong> Vendor/seller-facing mobile application for

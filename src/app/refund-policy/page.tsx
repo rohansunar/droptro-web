@@ -30,8 +30,9 @@ export default function RefundPolicyPage() {
               <h2 className="mb-4 text-2xl font-semibold text-gray-900">1. Overview</h2>
               <p>
                 This Refund &amp; Cancellation Policy applies to all orders placed through the
-                Droptro platform — including the <strong>DroptroGo</strong> customer app,{' '}
-                <strong>Droptro Seller</strong> vendor app, and our website (
+                Droptro platform — including the <strong>Droptro</strong> customer app,{' '}
+                <strong>Droptro Seller</strong> vendor app, <strong>DroptroGo</strong> rider app,
+                and our website (
                 <strong>droptro.com</strong>). We are committed to a transparent and fair refund
                 process in accordance with{' '}
                 <a

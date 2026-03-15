@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
               <p className="mt-3">
                 This Privacy Policy describes how we collect, use, disclose, store, and protect
                 your personal information when you use our mobile applications (
-                <strong>DroptroGo</strong> and <strong>Droptro Seller</strong>), website (
+                <strong>Droptro</strong> (customer app), <strong>DroptroGo</strong> (rider app), and <strong>Droptro Seller</strong> (vendor app)), website (
                 <strong>droptro.com</strong>), and related services (collectively, the
                 &quot;Services&quot;). By using our Services you agree to this Privacy Policy.
               </p>

@@ -29,10 +29,28 @@ const contactInfo = {
 
 /**
  * App download links
+ * - Droptro  : Customer app (order water & essentials)
+ * - DroptroGo: Rider/delivery-partner app
  */
 const appLinks = [
-  { href: '#', label: 'Droptro Seller' },
-  { href: '#', label: 'DroptroGo' },
+  {
+    href: 'https://play.google.com/store/apps/details?id=com.droptro.customer',
+    label: 'Droptro',
+    description: 'Customer App',
+    external: true,
+  },
+  {
+    href: 'https://play.google.com/store/apps/details?id=com.droptro.rider',
+    label: 'Droptro Seller',
+    description: 'Seller App',
+    external: true,
+  },
+  {
+    href: 'https://play.google.com/store/apps/details?id=com.droptro.rider',
+    label: 'DroptroGo',
+    description: 'Rider App',
+    external: true,
+  },
 ];
 
 /**
@@ -113,17 +131,22 @@ export function Footer() {
           {/* App Download Section */}
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-900">
-              Download App
+              Our Apps
             </h3>
-            <div className="space-y-2">
+            <div className="space-y-3">
               {appLinks.map((app) => (
-                <Link
+                <a
                   key={app.label}
                   href={app.href}
-                  className="block text-sm font-medium text-blue-600 transition-colors duration-200 hover:text-blue-700"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col group"
                 >
-                  {app.label}
-                </Link>
+                  <span className="text-sm font-semibold text-blue-600 transition-colors duration-200 group-hover:text-blue-700">
+                    {app.label}
+                  </span>
+                  <span className="text-xs text-gray-500">{app.description}</span>
+                </a>
               ))}
             </div>
             {/* Social Links */}
