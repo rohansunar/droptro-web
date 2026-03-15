@@ -24,7 +24,7 @@ const footerLinks = {
 const contactInfo = {
   address: 'Bhanu Nagar, Jalpaiguri, West Bengal, India - 735101',
   email: 'contact@droptro.com',
-  phone: '+91 9474 123-4567',
+  phone: '+91 94743-93764',
 };
 
 /**

@@ -8,11 +8,11 @@ export const metadata: Metadata = {
 };
 
 /**
- * Business hours configuration
+ * Business hours configuration (IST – Indian Standard Time)
  */
 const businessHours = [
-  { day: 'Monday - Friday', time: '9:00 AM - 6:00 PM (PST)' },
-  { day: 'Saturday', time: '10:00 AM - 4:00 PM (PST)' },
+  { day: 'Monday – Friday', time: '9:00 AM – 9:00 PM (IST)' },
+  { day: 'Saturday', time: '10:00 AM – 2:00 PM (IST)' },
   { day: 'Sunday', time: 'Closed' },
 ];
 
@@ -61,7 +61,7 @@ export default function ContactPage() {
             {/* Contact Details Card */}
             <div className="rounded-xl bg-white p-6 shadow-sm">
               <h2 className="mb-6 text-xl font-semibold text-gray-900">Get in Touch</h2>
-              
+
               {/* Address */}
               <div className="mb-6 flex gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-100">
@@ -114,7 +114,7 @@ export default function ContactPage() {
                 </div>
                 <h2 className="text-xl font-semibold text-gray-900">Business Hours</h2>
               </div>
-              
+
               <div className="space-y-3">
                 {businessHours.map((item) => (
                   <div key={item.day} className="flex justify-between border-b border-gray-100 pb-3 last:border-0">
@@ -128,7 +128,7 @@ export default function ContactPage() {
             {/* Social Media Links Card */}
             <div className="rounded-xl bg-white p-6 shadow-sm">
               <h2 className="mb-6 text-xl font-semibold text-gray-900">Follow Us</h2>
-              
+
               <div className="flex gap-4">
                 {socialLinks.map((social) => (
                   <a
